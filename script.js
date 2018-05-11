@@ -17,7 +17,7 @@ const QuestionMarks = (str) => {
   for (var i=0; i<n; i++) {
     v = lookup[String.prototype.charCodeAt(str[i])];
     if (v) {
-      for (var j=i+1+3; j<n; j++) { // +1 to move once to the right past i, +3 for the minimum 3 characters separation
+      for (var j = i + 1 + 3; j < n; j++) { // +1 to move once to the right past i, +3 for the minimum 3 characters separation
         if (str[j] == v) {
            if(str.slice(i+1,j).split('?').length - 1 === 3) return true;
         }
