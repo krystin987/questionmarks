@@ -1,16 +1,5 @@
 /* Currently running, as page loads
 for loops are the 'big expense', save time by storing values */
-lookup = Array(256)
-lookup[String.prototype.charCodeAt('1')] = '9'
-lookup[String.prototype.charCodeAt('2')] = '8'
-lookup[String.prototype.charCodeAt('3')] = '7'
-lookup[String.prototype.charCodeAt('4')] = '6'
-lookup[String.prototype.charCodeAt('5')] = '5'
-lookup[String.prototype.charCodeAt('6')] = '4'
-lookup[String.prototype.charCodeAt('7')] = '3'
-lookup[String.prototype.charCodeAt('8')] = '2'
-lookup[String.prototype.charCodeAt('9')] = '1'
-
 
 const QuestionMarks = (str) => {
   n = str.length;
@@ -44,6 +33,17 @@ console.timeEnd();
 console.time();
 QuestionMarks(test4); // true
 console.timeEnd();
+
+lookup = Array(256)
+lookup[String.prototype.charCodeAt('1')] = '9'
+lookup[String.prototype.charCodeAt('2')] = '8'
+lookup[String.prototype.charCodeAt('3')] = '7'
+lookup[String.prototype.charCodeAt('4')] = '6'
+lookup[String.prototype.charCodeAt('5')] = '5'
+lookup[String.prototype.charCodeAt('6')] = '4'
+lookup[String.prototype.charCodeAt('7')] = '3'
+lookup[String.prototype.charCodeAt('8')] = '2'
+lookup[String.prototype.charCodeAt('9')] = '1'
 
 // const QuestionMarks = (str) => {
 //   n = str.length; // storage in this case saves a bit of time
