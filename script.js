@@ -27,23 +27,6 @@ const QuestionMarks = (str) => {
   return false;
 }
 
-// const QuestionMarks = (str) => {
-//   n = str.length; // storage in this case saves a bit of time
-//   for (var i = 0; i < n; i++) { // outerloop
-//     ni = Number(str[i]); // store for time
-//     if (ni) {
-//       nn = 10 - ni; // store the difference in the first iterator from 10
-//       for (var j = i; j < n; j++) { // inner loop
-//         nj = Number(str[j]);
-//         if (nj && (nj==nn)) { // check if the difference is the same, if so, check for the char rules
-//           if(str.slice(i+1,j).split('?').length - 1 === 3) return true;
-//         }
-//       }
-//     }
-//   }
-//   return false;
-// }
-
 const test3 = "bb6?9"; //false
 const test2 = "bcc?7??ccc?3tt1??????5"; //true
 const test4 = "g??7??ccc??3tt1??????5"; //false
@@ -61,6 +44,23 @@ console.timeEnd();
 console.time();
 QuestionMarks(test4); // true
 console.timeEnd();
+
+// const QuestionMarks = (str) => {
+//   n = str.length; // storage in this case saves a bit of time
+//   for (var i = 0; i < n; i++) { // outerloop
+//     ni = Number(str[i]); // store for time
+//     if (ni) {
+//       nn = 10 - ni; // store the difference in the first iterator from 10
+//       for (var j = i; j < n; j++) { // inner loop
+//         nj = Number(str[j]);
+//         if (nj && (nj==nn)) { // check if the difference is the same, if so, check for the char rules
+//           if(str.slice(i+1,j).split('?').length - 1 === 3) return true;
+//         }
+//       }
+//     }
+//   }
+//   return false;
+// }
 
 // const QuestionMarks = (str) => {
 //   var n = str.length;
