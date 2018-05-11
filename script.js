@@ -7,7 +7,8 @@ const QuestionMarks = (str) => {
           if(str.slice(i+1,j).split('?').length - 1 === 3) return true;
         }
     }
-    console.timeEnd("timer");
+  console.timeEnd("timer");
   }
+  console.timeEnd("timer");
   return false;
 }
